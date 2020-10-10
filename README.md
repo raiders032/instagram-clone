@@ -2,7 +2,9 @@
 
 instagram-clone
 
-## 1.0 Setting up the project
+
+
+### 1.0 Setting up the project
 
 ```shell
 yarn init
@@ -22,7 +24,7 @@ ___
 
 
 
-## 1.1 Creating GraphQL Server
+### 1.1 Creating GraphQL Server
 
 ```shell
 yarn add dotenv
@@ -66,4 +68,66 @@ Error: Requires Babel "^7.0.0-0", but was loaded with "6.26.3". If you are sure 
 2. node_moldules 지우기
 3. yarn add @babel/cli
 ```
+
+
+
+___
+
+
+
+### 1.2 Setting Up the Server like the Pros
+
+```
+yarn add morgan
+```
+
+
+
+morgan
+
+* 로깅 모듈
+
+graphQLServer
+
+* Express 서버가 내장되어 있다.
+
+```javascript
+const server = new GraphQLServer({ typeDefs, resolvers });
+
+#GraphQLServer룰 통해 express에 접근 할 수 있다.
+#미들웨어 morgan을 추가한다.
+server.express.use(logger("dev"));
+```
+
+
+
+```shell
+yarn add graphql-tools merge-graphql-schemas
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
